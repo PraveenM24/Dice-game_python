@@ -1,3 +1,5 @@
+#Disclaimer:This program is created by myself from scratch and contains no code from the internet   
+
 import random
 import DICE_def
 
@@ -5,6 +7,10 @@ default_amount = 500
 Bounty_count = 0
 print("\t\t\tWELCOME!!")
 print('\n\nYou have '+str(default_amount)+'$ in your account')
+
+#Extra Utility - 1
+#This section is for providing trial game to the user
+
 trial = str(input('Do you want a trial game? (y-Yes/n=No):\n'))
 if trial == 'y':
     print('\t\t\tTRIAL GAME\n')
@@ -32,6 +38,11 @@ if trial == 'y':
                 print("You won\nTrial is over!!")
             else:
                 print('You lost\nTrial is over!!')
+
+#Extra Utility - 2
+#Bounty tries are where the user's bet amount does not get dedcuted
+#Users can get this by paying 50$ 
+
 Bounty = str(input('Would you like to get Bounty tries for 50$ ? (y-Yes/n-No)y'))
 if Bounty == 'y':
     Bounty_count = int(input('Enter the number of bounty tries you want (Your balance:'+str(default_amount)+'$) :'))
@@ -81,6 +92,9 @@ if Bounty == 'y':
     else:
         print("Not enough dollars")
 
+#Main Section
+#This is the main game section.        
+        
 while 1 and Bounty_count == 0:
     roll = str(input("Press r-roll q-quit:\n"))
     if roll == "r":
